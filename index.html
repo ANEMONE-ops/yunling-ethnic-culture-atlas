@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1efe7">
+  <meta name="description" content="云岭民族文化数字图谱：以静态数字展览探索云南民族文化资源、地图、水脉故事与数字档案。">
+  <title>云岭民族文化数字图谱</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="patterns-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#page-content">跳转至展览内容</a>
+  <div class="app-frame">
+    <aside class="side-rail" id="side-rail" aria-label="展览导航">
+      <a class="brand-lockup" href="#/home" aria-label="云岭民族文化数字图谱首页">
+        <span class="brand-seal" aria-hidden="true"><i></i><i></i><i></i><b></b></span>
+        <span class="brand-name"><strong>云岭</strong><small>民族文化数字图谱</small></span>
+      </a>
+      <div class="rail-rule"></div>
+      <p class="rail-label">展览</p>
+      <nav class="rail-nav" aria-label="主导航">
+        <a href="#/home" data-nav="home"><span class="nav-glyph">⌂</span><span>序厅</span><small>01</small></a>
+        <a href="#/map" data-nav="map"><span class="nav-glyph">◎</span><span>地图漫游</span><small>02</small></a>
+        <a href="#/peoples" data-nav="peoples"><span class="nav-glyph">⌘</span><span>民族索引</span><small>03</small></a>
+        <a href="#/stories" data-nav="stories"><span class="nav-glyph">▤</span><span>山水故事</span><small>04</small></a>
+        <a href="#/archive" data-nav="archive"><span class="nav-glyph">▦</span><span>纹样档案</span><small>05</small></a>
+        <a href="#/model" data-nav="model"><span class="nav-glyph">◈</span><span>三维展厅</span><small>06</small></a>
+        <a href="#/workshop" data-nav="workshop"><span class="nav-glyph">✳</span><span>拼纹工坊</span><small>07</small></a>
+      </nav>
+      <p class="rail-label rail-label-secondary">我的空间</p>
+      <nav class="rail-nav rail-nav-small" aria-label="个人工具">
+        <a href="#/fieldnotes" data-nav="fieldnotes"><span class="nav-glyph">✎</span><span>田野手记</span></a>
+        <a href="#/saved" data-nav="saved"><span class="nav-glyph">◇</span><span>我的收藏</span><b class="nav-count" id="saved-count">0</b></a>
+        <a href="#/about" data-nav="about"><span class="nav-glyph">ⓘ</span><span>档案说明</span></a>
+      </nav>
+      <div class="rail-bottom">
+        <div class="rail-landmark"><span class="landmark-ridge"></span><span class="landmark-river"></span></div>
+        <p>云南 · 中国西南</p>
+        <small>山地、森林与水脉的文化档案</small>
+      </div>
+    </aside>
+
+    <div class="site-shell">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" type="button" aria-label="打开导航" aria-expanded="false"><span></span><span></span></button>
+        <div class="breadcrumb"><span>云岭档案</span><i>/</i><strong id="breadcrumb-current">序厅</strong></div>
+        <div class="topbar-actions">
+          <span class="status-mark"><i></i> 静态数字展览</span>
+          <button class="top-action" id="global-search" type="button" aria-label="搜索展览内容"><span>⌕</span><kbd>搜索</kbd></button>
+          <a class="top-bookmark" href="#/saved" aria-label="查看收藏"><span>◇</span><b id="top-saved-count">0</b></a>
+        </div>
+      </header>
+      <main id="page-content" tabindex="-1" aria-live="polite"></main>
+      <footer class="site-footer">
+        <span>云岭民族文化数字图谱</span><span>资料与图像均标明来源和性质 · 文化内容欢迎共同校核</span><a href="#/about">档案方法 ↗</a>
+      </footer>
+    </div>
+  </div>
+  <div class="rail-scrim" id="rail-scrim" hidden></div>
+  <dialog class="archive-dialog" id="archive-dialog" aria-labelledby="dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="关闭">×</button></form>
+    <div id="dialog-content"></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
